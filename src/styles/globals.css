@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0f0f10;
+  --fg: #eaeaea;
+    /* Paleta base (azules marinos / oscuros) */
+  --color-bg-dark: #0a1a2f;
+  --color-bg-light: #10294b;
+  --color-accent: #4f9df7;
+  --color-hover-bg: rgba(79, 157, 247, 0.18);
+  --color-text-light: #dce3f0;
+  --color-text-active: #b6d6ff;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-shadow: rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, sans-serif;
+}
+/* navbar */
+.contenedor_navbar_completo{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 0;           /* separa la pastilla del borde superior */
+  z-index: 1000;
+  pointer-events: none;      /* la capa contenedora no capta clicks */
+}
+.navbar_contenedor{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 30px;
+  background: var(--color-bg-dark);
+  border: 1px solid var(--color-border);
+  border-radius: 100000000000000000000000000px;
+  box-shadow: 0 8px  var(--color-shadow),
+              inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  max-width: 600px;
+  width: calc(100% - 32px);
+}
+
+.navbar_buttons {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 12px;
+  border-radius: 9999999999999999px;
+  transition: background .25s ease, color .25s ease, transform .1s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.navbar_buttons:hover {
+  background: var(--color-hover-bg);
+  color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+.navbar_buttons.is-active {
+  background: var(--color-bg-light);
+  color: var(--color-text-active);
+}
+/* profile */
+.profile_section{
+  padding-top: 80px;
+}
+.profile_section_vito{
+
+}
+.profile_section_vito_img{
+
+}
+.profile_section_vito_name{
+
+}
+.profile_section_vito_info{
+
+}
+.profile_section_vito_shortbio{
+
+}
+.profile_section_buttons_container{
+
+}
+.profile_section_buttons{
+
+}
+
+
+/* jobs */
+/* abautme */
+/* fotter */
+
+
+
+
+/* tablets */
+/* navbar */
+/* profile */
+/* jobs */
+/* abautme */
+/* fotter */
+
+
+/* celular */
+/* navbar */
+/* profile */
+/* jobs */
+/* abautme */
+/* fotter */
