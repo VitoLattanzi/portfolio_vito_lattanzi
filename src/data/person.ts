@@ -17,8 +17,20 @@ export const vito: Person = {
     { label: 'GitHub', url: 'https://github.com/VitoLattanzi' },
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/vito-lattanzi-ab9927338' },
   ],
-  skills: ["html", "css", "javascript", "tipescript", "pyhton", "mondoDB", "MySQL", "react", "node.js"]
+  skills: [
+    {name: "html", icon: "" },
+    {name: "css", icon: "" },
+    {name: "javascript", icon: "" },
+    {name: "tipescript", icon: "" },
+    {name: "pyhton", icon: "" },
+    {name:"mondoDB", icon: "" },
+    {name: "MySQL", icon: "" },
+    {name: "react", icon: "" },
+    {name: "node.js" , icon: "" },  
+  ]
 }
 
 // Ejemplo: si querés mostrar edad dinámica en el Hero
 export const vitoAge = vito.birthdate ? calcAge(vito.birthdate) : undefined
+
+export const vitoSkills = vito.skills ? vito.skills : []  

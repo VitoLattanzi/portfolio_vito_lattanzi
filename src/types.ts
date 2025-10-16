@@ -12,7 +12,7 @@ export type Person = {
   shortBio: string
   longBio?: string
   contacts: Contact[]
-  skills: string[]
+  skills: { name: string; icon: string }[]
 }
 
 export type Project = {

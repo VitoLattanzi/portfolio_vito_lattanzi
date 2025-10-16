@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  --background-origin: #101829;
   --bg: #0f0f10;
   --fg: #eaeaea;
     /* Paleta base (azules marinos / oscuros) */
@@ -27,6 +28,37 @@ body {
   color: var(--fg);
   font-family: system-ui, sans-serif;
 }
+h2{
+  display: flex;
+  justify-content: center;
+  row-gap: 100px;
+}
+p{
+  justify-content:justify;
+  text-align: center;
+}
+
+/* app.tsx */
+.pagina_completa{
+  max-width: auto;
+  overflow-x: hidden;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+  max-width: auto;
+  margin: 0 auto;
+}
+.main_skils{
+  display: flex;
+  flex-direction: row;
+  gap: 96px;
+} 
+
+
+
+
 /* navbar */
 .contenedor_navbar_completo{
   position: fixed;
@@ -111,7 +143,36 @@ body {
 
 
 /* jobs */
+/* CONTENEDOR ABAUT Y SKILLS */
+.main_skils{
+  background-color: var(--background-origin);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  width: auto;
+}
+
 /* abautme */
+.AbautMe_section{
+  min-width: 50%;
+
+}
+.AbautMe_tittle{
+  
+}
+.AbautMe_text{
+
+}
+
+/* skills */
+.skills_section{
+  min-width: 50%;
+
+}
+.skills_section_title{
+
+}
 /* fotter */
 
 
