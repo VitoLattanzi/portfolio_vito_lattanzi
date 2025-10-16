@@ -1,26 +1,31 @@
-# Logs
-logs
+# Dependencias (no se suben)
+node_modules/
+
+# Builds / caches
+dist/
+build/
+.vite/
+.cache/
+
+# Logs y temporales
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+*.tmp
+*.swp
+*.swo
 
-.env    
-.gitignore
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# SO / editor
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+.vscode/
+.idea/
+*.iml
+
+# TS cache
+*.tsbuildinfo
+
+# Variables de entorno (privadas)
+.env.local
+.env.*.local
+
+# Cobertura (si usás tests)
+coverage/
