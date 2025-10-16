@@ -6,9 +6,9 @@ import Footer from '@/secctions/Footer'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100">
+    <div className="pagina_completa">
       <Navbar />
-      <main className="space-y-24" >
+      <main className="main" >
          <Profile/>
          <Jobs />
          <AboutMe />
