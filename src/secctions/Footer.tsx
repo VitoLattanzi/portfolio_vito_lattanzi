@@ -37,6 +37,7 @@ export default function Footer() {
             <img className="logos" src="/icons/gmail.svg" alt="Gmail" />
           </SafeLink>
         </div>
+        <hr className="Fotter_linea"/>
         <p className="Fotter_rights_reserved">© {new Date().getFullYear()} - Vito Lattanzi</p>
       </div>
     </footer>

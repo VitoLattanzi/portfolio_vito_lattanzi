@@ -1,7 +1,5 @@
 // slug: útil para rutas /project/:slug
-// Convierte un string “normal” en un slug
-// Ejemplo:
-/* "Chat estilo WhatsApp (React)" → "chat-estilo-whatsapp-react" */
+// Convierte un string “normal” en un slug amigable para URLs.
 export function slugify(text: string): string {
   return text
     .toLowerCase()

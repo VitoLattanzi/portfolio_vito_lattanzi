@@ -1,6 +1,6 @@
 import Navbar from '@/secctions/Navbar'
 import Profile from '@/secctions/Profile'
-import Jobs from '@/secctions/Jobs'
+import Proyects from '@/secctions/Proyects'
 import AboutMe from '@/secctions/Aboutme'
 import Footer from '@/secctions/Footer'
 import Skills from '@/secctions/Skills'
@@ -16,7 +16,7 @@ export default function App() {
           <AboutMe />
           <Skills/>
          </div>
-         <Jobs />
+         <Proyects />
       </main>
       <Footer />
     </div>

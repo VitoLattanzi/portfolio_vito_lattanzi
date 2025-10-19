@@ -44,9 +44,10 @@ p{
   overflow-x: hidden;
 }
 .main{
+  background-color: var(--background-origin);
   display: flex;
   flex-direction: column;
-  gap: 96px;
+  gap: 40px;
   max-width: auto;
   margin: 0 auto;
 }
@@ -164,15 +165,79 @@ p{
 .AbautMe_text{
 
 }
-
-/* skills */
-.skills_section{
+/* ---------- SECCIÓN SKILLS GENERAL ---------- */
+.skills_section {
   min-width: 50%;
-
 }
-.skills_section_title{
 
+/* Título principal */
+.skills_section_title {
+  text-align: center;
+  font-size: 1.5rem;          /* antes 1.8rem */
+  margin-bottom: 0.7rem;      /* antes 1rem */
 }
+
+/* ---------- CONTENEDORES ---------- */
+.skills_section_groups_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;                /* antes 2rem */
+}
+
+.skills_section_subgroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills_section_DB_Backend_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.4rem;                /* antes 2rem */
+}
+
+/* ---------- LISTA DE SKILLS ---------- */
+.skills_section_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;                  /* antes 24px */
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 14px;           /* antes 20px */
+}
+
+.skills_section_list_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70px;                /* antes 80px */
+  transition: transform 0.2s ease;
+}
+
+.skills_section_list_item:hover {
+  transform: scale(1.08);     /* leve ajuste */
+}
+
+.skills_section_list_item i {
+  font-size: 40px;            /* antes 48px */
+}
+
+.skills_section_list_name {
+  margin-top: 4px;            /* antes 6px */
+  font-size: 0.8rem;          /* antes 0.9rem */
+  text-align: center;
+}
+
+/* ---------- SUBTÍTULOS (Frontend, Backend, etc.) ---------- */
+.skills_section_subtitle {
+  font-size: 1rem;            /* antes 1.2rem */
+  margin-bottom: 0.3rem;      /* antes 0.5rem */
+  text-align: center;
+}
+
+
 /* fotter */
 .Fotter_section{
   
@@ -182,8 +247,10 @@ p{
 }
 .Fotter_tittle{
 
+  margin-left: 20px;
 }
 .Fotter_links_container{
+  margin-left: 20px;
   display: flex;
   flex-direction: row ;
   gap: 20px ;
@@ -193,14 +260,21 @@ p{
   
 }
 .logos{
-
+  margin-top: 10px;
   width: 30px;
   height: 30px;
   filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
   transition: filter .25s ease;
 }
+.Fotter_linea{ 
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 0;
+  height: 2px;
+  background: var(--color-border);
+}
 .Fotter_rights_reserved{
-
+  margin-bottom: 10px;
 }
 
 
