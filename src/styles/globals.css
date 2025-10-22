@@ -57,8 +57,59 @@ p{
   gap: 96px;
 } 
 
+/* ------------------------------ */
+/* componentes */
+/* src/styles/Carousel_de_img.css */
+.mini-carousel { width: 100%; position: relative; }
 
+.mini-carousel__viewport {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+  background: #0b0b0b;
+}
 
+.mini-carousel__track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  transition: transform 300ms ease;
+}
+
+.mini-carousel__slide { position: relative; }
+.mini-carousel__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mini-carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid #2a2a2a;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  width: 36px; height: 36px; border-radius: 50%;
+  display: grid; place-items: center;
+  cursor: pointer; user-select: none;
+}
+.mini-carousel__btn--prev { left: 8px; }
+.mini-carousel__btn--next { right: 8px; }
+
+.mini-carousel__dots {
+  display: flex; gap: 6px; justify-content: center;
+  margin-top: 8px;
+}
+.mini-carousel__dot {
+  width: 8px; height: 8px; border-radius: 999px; border: none;
+  background: #444; cursor: pointer;
+}
+.mini-carousel__dot.is-active { background: #fff; width: 16px; }
+
+/* ------------------------------ */
 
 /* navbar */
 .contenedor_navbar_completo{
@@ -143,7 +194,6 @@ p{
 }
 
 
-/* jobs */
 /* CONTENEDOR ABAUT Y SKILLS */
 .main_skils{
   background-color: var(--background-origin);
@@ -235,6 +285,135 @@ p{
   font-size: 1rem;            /* antes 1.2rem */
   margin-bottom: 0.3rem;      /* antes 0.5rem */
   text-align: center;
+}
+
+/* ---------- LISTA PROYECTOS ---------- */
+.Proyects_section_title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.Proyects_section_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ====== Card ====== */
+.Proyects_section_card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #0e0e10;
+  border: 1px solid #232323;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.Proyects_section_card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ====== Texto ====== */
+.proyect_text_conteiner {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.proyect_name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.proyect_description {
+  font-size: 0.9rem;
+  color: #b8b8b8;
+  line-height: 1.4;
+}
+
+/* ====== Carrusel ====== */
+.Proyects_section_card .mini-carousel {
+  width: 100%;
+}
+
+.Proyects_section_card .mini-carousel__viewport {
+  width: 100%;
+  max-height: 200px; /* controla que no ocupe todo el alto */
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0b0b0b;
+}
+
+.Proyects_section_card .mini-carousel__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Botones del carrusel */
+.Proyects_section_card .mini-carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: #fff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.Proyects_section_card .mini-carousel__btn:hover {
+  background: rgba(255,255,255,0.15);
+}
+.Proyects_section_card .mini-carousel__btn--prev { left: 8px; }
+.Proyects_section_card .mini-carousel__btn--next { right: 8px; }
+
+/* Dots */
+.Proyects_section_card .mini-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+.Proyects_section_card .mini-carousel__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  background: #555;
+  cursor: pointer;
+  transition: background 0.2s ease, width 0.2s ease;
+}
+.Proyects_section_card .mini-carousel__dot.is-active {
+  background: #fff;
+  width: 16px;
+}
+
+/* ====== Iconos ====== */
+.proyect_icons_conteiner {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+  align-items: center;
+}
+
+.proyect_icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+}  
+
+.logos {
+  width: 18px;
+  height: 18px;
 }
 
 
