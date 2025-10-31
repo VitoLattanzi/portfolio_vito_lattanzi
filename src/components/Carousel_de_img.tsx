@@ -58,18 +58,18 @@ export default function MiniCarousel({ images, aspect = "16 / 9", className }: P
         </div>
 
         <button
-          className="mini-carousel__btn mini-carousel__btn--prev"
+          className="mini-carousel__btn mini-carousel__btn--prev text-center align-middle "
           onClick={prev}
           aria-label="Anterior"
         >
-          ‹
+          ‹-
         </button>
         <button
           className="mini-carousel__btn mini-carousel__btn--next"
           onClick={next}
           aria-label="Siguiente"
         >
-          ›
+          -›
         </button>
       </div>
 

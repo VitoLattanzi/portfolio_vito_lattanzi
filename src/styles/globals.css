@@ -51,11 +51,6 @@ p{
   max-width: auto;
   margin: 0 auto;
 }
-.main_skils{
-  display: flex;
-  flex-direction: row;
-  gap: 96px;
-} 
 
 /* ------------------------------ */
 /* componentes */
@@ -210,10 +205,16 @@ p{
 
 }
 .AbautMe_tittle{
-  
+  text-align: center;
+  font-size: 1.5rem;          /* antes 1.8rem */
+  margin-bottom: 0.7rem;
 }
 .AbautMe_text{
-
+  font-size: 1rem;            /* antes 1.2rem */
+  margin-bottom: 0.3rem;      /* antes 0.5rem */
+  text-align: center;
+  align-items: center;
+  justify-self: center;     
 }
 /* ---------- SECCIÓN SKILLS GENERAL ---------- */
 .skills_section {
@@ -288,6 +289,9 @@ p{
 }
 
 /* ---------- LISTA PROYECTOS ---------- */
+.Proyects{
+  margin-bottom: 12px;
+}
 .Proyects_section_title {
   font-size: 1.8rem;
   font-weight: 600;

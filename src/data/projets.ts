@@ -23,10 +23,36 @@ export const projets: Project[] = [
       { src: '/projects/whatsapp/settings.webp', alt: 'Pantalla de ajustes' },
     ],
   },
+  {
+    slug: '', //nombre del proyecto
+    description: '', //descripcion de la funcion
+    stack: [''], //stack tecnologico usado ej HTML Y CSS
+    repoUrl: '',  //link de git
+    siteUrl: '', // link de deploy
+    images: [
+      { src: '', alt: '' },
+      { src: '', alt: '' },
+      { src: '', alt: '' },
+    ],
+  },
+  
+  
+
 ];
 
 
-
+/* {
+    slug: '', //nombre del proyecto
+    description: '', //descripcion de la funcion
+    stack: [''], //stack tecnologico usado ej HTML Y CSS
+    repoUrl: '',  //link de git
+    siteUrl: '', // link de deploy
+    images: [
+      { src: '', alt: ' },
+      { src: '', alt: '' },
+      { src: '', alt: '' },
+    ],
+  }, */
 
 /* export const projets = [
     {

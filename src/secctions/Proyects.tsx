@@ -7,7 +7,7 @@ import MiniCarousel from "../components/Carousel_de_img";
 
 export default function Proyects() {
     return (
-        <section>
+        <section className="Proyects">
             <h2 className="Proyects_section_title">Proyectos</h2>
             <div className="Proyects_section_container">
                 {projets.map((project, index) => (

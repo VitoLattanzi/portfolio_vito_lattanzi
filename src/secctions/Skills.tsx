@@ -34,11 +34,12 @@ export default function Skills() {
                     </ul>
                 </div>
                 <div className="skills_section_DB_Backend_container">
-                    {/* DATABASES: abajo izquierda */}
+
+                    {/* BACKEND: abajo derecha */}
                     <div className="skills_section_subgroup">
-                        <h3 className="skills_section_subtitle">Bases de datos</h3>
+                        <h3 className="skills_section_subtitle">Backend</h3>
                         <ul className="skills_section_list">
-                            {db.map((s) => (
+                            {back.map((s) => (
                                 <li key={s.name} className="skills_section_list_item">
                                     <i className={s.icon}></i>
                                     <p className="skills_section_list_name">{s.name}</p>
@@ -46,12 +47,12 @@ export default function Skills() {
                             ))}
                         </ul>
                     </div>
-
-                    {/* BACKEND: abajo derecha */}
+                    
+                    {/* DATABASES: abajo izquierda */}
                     <div className="skills_section_subgroup">
-                        <h3 className="skills_section_subtitle">Backend</h3>
+                        <h3 className="skills_section_subtitle">Bases de datos</h3>
                         <ul className="skills_section_list">
-                            {back.map((s) => (
+                            {db.map((s) => (
                                 <li key={s.name} className="skills_section_list_item">
                                     <i className={s.icon}></i>
                                     <p className="skills_section_list_name">{s.name}</p>
