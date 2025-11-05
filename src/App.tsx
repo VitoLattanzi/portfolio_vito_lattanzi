@@ -15,10 +15,10 @@ export default function App() {
         <div className='main_skils'>
           <AboutMe />
           <Skills/>
-         </div>
-         <Proyects />
+        </div>
+        <Proyects />
       </main>
       <Footer />
     </div>
   )
-}
+} 

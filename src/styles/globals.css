@@ -129,7 +129,7 @@ p{
   justify-content: space-between;
   gap: 16px;
   padding: 10px 30px;
-  background: var(--color-bg-dark);
+  background: var(--color-bg-light);
   border: 1px solid var(--color-border);
   border-radius: 100000000000000000000000000px;
   box-shadow: 0 8px  var(--color-shadow),
@@ -353,46 +353,76 @@ p{
 /* ====== Carrusel ====== */
 .Proyects_section_card .mini-carousel {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
+/* === VIEWPORT === */
 .Proyects_section_card .mini-carousel__viewport {
+  position: relative;
   width: 100%;
-  max-height: 200px; /* controla que no ocupe todo el alto */
+  aspect-ratio: var(--aspect, 16 / 9); /* si el prop no pasa aspect */
+  max-height: clamp(220px, 28vh, 360px); /* que no sea enorme */
   border-radius: 12px;
   overflow: hidden;
   background: #0b0b0b;
 }
 
+/* === TRACK & SLIDES === */
+.Proyects_section_card .mini-carousel__track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.35s ease;
+  will-change: transform;
+}
+.Proyects_section_card .mini-carousel__slide {
+  flex: 0 0 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* === IMAGEN === */
 .Proyects_section_card .mini-carousel__img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  display: block;
+  object-fit: cover;          /* llena sin deformar */
+  object-position: center;/* top para screenshots; center si querés neutro */
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
-/* Botones del carrusel */
+/* === BOTONES === */
 .Proyects_section_card .mini-carousel__btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   color: #fff;
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   cursor: pointer;
-  transition: background 0.2s ease;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 .Proyects_section_card .mini-carousel__btn:hover {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-50%) scale(1.05);
 }
 .Proyects_section_card .mini-carousel__btn--prev { left: 8px; }
 .Proyects_section_card .mini-carousel__btn--next { right: 8px; }
 
-/* Dots */
+/* === DOTS === */
 .Proyects_section_card .mini-carousel__dots {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 6px;
   margin-top: 6px;
 }
@@ -403,12 +433,13 @@ p{
   border: none;
   background: #555;
   cursor: pointer;
-  transition: background 0.2s ease, width 0.2s ease;
+  transition: background 0.25s ease, width 0.25s ease;
 }
 .Proyects_section_card .mini-carousel__dot.is-active {
   background: #fff;
   width: 16px;
 }
+
 
 /* ====== Iconos ====== */
 .proyect_icons_conteiner {

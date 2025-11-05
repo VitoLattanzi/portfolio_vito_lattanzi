@@ -19,7 +19,7 @@ export default function Proyects() {
 
                       {/* Mini carrusel ENTRE descripción y links */}
                       {project.images && project.images.length > 0 && (
-                        <MiniCarousel images={project.images} aspect="16 / 9" />
+                        <MiniCarousel images={project.images} aspect={project.aspect || "16 / 9"} />
                       )}
 
                       <div className="proyect_icons_conteiner">

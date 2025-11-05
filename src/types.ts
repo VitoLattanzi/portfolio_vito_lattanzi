@@ -26,4 +26,5 @@ export type Project = {
   repoUrl: string
   siteUrl: string
   cover?: string
+  aspect: string,
 }
