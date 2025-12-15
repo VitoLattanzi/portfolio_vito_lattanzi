@@ -1,9 +1,11 @@
-type Props = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-  external?: boolean;
-};
+import type { AnchorHTMLAttributes } from 'react'
+
+type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
+  external?: boolean
+}
 
 export default function SafeLink({ external, ...props }: Props) {
-  const isExternal = external ?? /^https?:\/\//i.test(props.href || "");
+  const isExternal = external ?? /^https?:\/\//i.test(props.href || '')
   if (isExternal) {
     return (
       <a
@@ -11,7 +13,7 @@ export default function SafeLink({ external, ...props }: Props) {
         target="_blank"
         rel="noopener noreferrer"
       />
-    );
+    )
   }
-  return <a {...props} />;
+  return <a {...props} />
 }

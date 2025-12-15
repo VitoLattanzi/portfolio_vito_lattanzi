@@ -13,9 +13,9 @@ export type Person = {
   longBio?: string
   contacts: Contact[]
   skills: {
-    frontend: { name: string; icon: string }[],
-    backend: { name: string; icon: string }[],
-    database: { name: string; icon: string }[],
+    frontend: { name: string; icon: string; level?: number }[],
+    backend: { name: string; icon: string; level?: number }[],
+    database: { name: string; icon: string; level?: number }[],
   }
 }
 export type Project = {
@@ -23,8 +23,9 @@ export type Project = {
   title: string
   description: string
   stack: string[]
-  repoUrl: string
-  siteUrl: string
+  repoUrl: string | string[]
+  siteUrl?: string
   cover?: string
-  aspect: string,
+  aspect?: string
+  images?: { src: string; alt: string }[]
 }

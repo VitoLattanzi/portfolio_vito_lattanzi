@@ -3,6 +3,7 @@ import { vitoSkills } from '@/data/person'
 interface Skill {
   name: string;
   icon: string;
+  level?: number;
 }
 
 interface SkillGroups {
@@ -26,9 +27,12 @@ export default function Skills() {
                     <h3 className="skills_section_subtitle">Frontend</h3>
                     <ul className="skills_section_list">
                         {front.map((s) => (
-                            <li key={s.name} className="skills_section_list_item">
+                            <li key={s.name} className="skills_section_list_item" tabIndex={0} aria-label={`${s.name}${s.level ? ` ${s.level}%` : ''}`}>
                                 <i className={s.icon}></i>
                                 <p className="skills_section_list_name">{s.name}</p>
+                                {s.level !== undefined && (
+                                  <span className="skills_section_level">{s.level}%</span>
+                                )}
                             </li>
                         ))}
                     </ul>
@@ -40,9 +44,12 @@ export default function Skills() {
                         <h3 className="skills_section_subtitle">Backend</h3>
                         <ul className="skills_section_list">
                             {back.map((s) => (
-                                <li key={s.name} className="skills_section_list_item">
+                                <li key={s.name} className="skills_section_list_item" tabIndex={0} aria-label={`${s.name}${s.level ? ` ${s.level}%` : ''}`}>
                                     <i className={s.icon}></i>
                                     <p className="skills_section_list_name">{s.name}</p>
+                                    {s.level !== undefined && (
+                                      <span className="skills_section_level">{s.level}%</span>
+                                    )}
                                 </li>
                             ))}
                         </ul>
@@ -53,9 +60,12 @@ export default function Skills() {
                         <h3 className="skills_section_subtitle">Bases de datos</h3>
                         <ul className="skills_section_list">
                             {db.map((s) => (
-                                <li key={s.name} className="skills_section_list_item">
+                                <li key={s.name} className="skills_section_list_item" tabIndex={0} aria-label={`${s.name}${s.level ? ` ${s.level}%` : ''}`}>
                                     <i className={s.icon}></i>
                                     <p className="skills_section_list_name">{s.name}</p>
+                                    {s.level !== undefined && (
+                                      <span className="skills_section_level">{s.level}%</span>
+                                    )}
                                 </li>
                             ))}
                         </ul>

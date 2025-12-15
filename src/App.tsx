@@ -10,14 +10,15 @@ export default function App() {
   return (
     <div className="pagina_completa">
       <Navbar />
-      <main className="main" >
-        <Profile/>
-        <div className='main_skils'>
+      <main className="main">
+        <Profile />
+        <div className="main_skills">
           <AboutMe />
-          <Skills/>
+          <Skills />
         </div>
         <Proyects />
       </main>
+      <hr className="page_divider" />
       <Footer />
     </div>
   )

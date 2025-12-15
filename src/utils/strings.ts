@@ -1,25 +1,24 @@
-// slug: útil para rutas /project/:slug
-// Convierte un string “normal” en un slug amigable para URLs.
+// Helpers para strings reutilizables en el portfolio
 export function slugify(text: string): string {
   return text
     .toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // sin tildes
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // sin tildes
     .replace(/[^a-z0-9]+/g, '-') // separadores
     .replace(/(^-|-$)+/g, '')
 }
 
 // Corta un texto si es muy largo y le agrega puntos suspensivos.
 export function truncate(s: string, n: number): string {
-  return s.length > n ? s.slice(0, n - 1) + '…' : s
+  return s.length > n ? s.slice(0, n - 1) + '...' : s
 }
 
-// capitalizar títulos si los recibís feos 
-// Convierte un texto a “Formato Título” (cada palabra empieza con mayúscula).
+// Capitaliza titulos si llegan en minusculas
 export function titleCase(s: string): string {
   return s
     .toLowerCase()
     .split(' ')
-    .map(w => w ? w[0].toUpperCase() + w.slice(1) : w)
+    .map(word => (word ? word[0].toUpperCase() + word.slice(1) : word))
     .join(' ')
 }
 
