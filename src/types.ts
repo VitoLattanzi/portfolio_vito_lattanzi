@@ -5,6 +5,7 @@ export type Contact = {
 
 export type Person = {
   name: string
+  avatar: string
   role: string
   location?: string
   birthdate?: string // de forma "YYYY-MM-DD"

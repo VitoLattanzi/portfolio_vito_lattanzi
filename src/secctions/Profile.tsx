@@ -5,8 +5,8 @@ export default function Profile() {
     <section id="profile" className="profile_section">
       <div className="profile_section_vito">
         <img
-          src="/foto.jpg"
-          alt={vito.name}
+          src={vito.avatar}
+          /* alt={vito.name} */
           className="profile_section_vito_img"
           loading="lazy"
           decoding="async"

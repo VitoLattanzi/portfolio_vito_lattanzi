@@ -3,6 +3,7 @@ import { calcAge } from '@/utils/strings'
 
 export const vito: Person = {
   name: 'Vito Lattanzi',
+  avatar: '/avatar.jpg',
   role: 'Full Stack Developer',
   location: 'CABA, Argentina',
   birthdate: '2006-03-02',
