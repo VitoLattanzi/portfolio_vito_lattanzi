@@ -1,23 +1,7 @@
 import type { Project } from '@/types'
 
 export const projects: Project[] = [
-  {
-    slug: 'whatsapp-clone',
-    title: 'Copia de WhatsApp Web',
-    aspect: '9 / 16',
-    description: 'Replica de la interfaz de WhatsApp Web enfocada en UI responsive y comportamiento basico de chat.',
-    stack: ['React', 'CSS'],
-    repoUrl: ['https://github.com/VitoLattanzi/tp-final-front-end.git'],
-    siteUrl: 'https://tp-final-front-end-nine.vercel.app/chats/',
-    images: [
-      { src: '/projects/whatsapp/home.png', alt: 'Home de la copia de WhatsApp' },
-      { src: '/projects/whatsapp/chat.png', alt: 'Vista de chat' },
-      { src: '/projects/whatsapp/info_contacto.png', alt: 'Pantalla de informacion de contacto' },
-      { src: '/projects/whatsapp/home_celular.jpeg', alt: 'Home desde celular' },
-      { src: '/projects/whatsapp/chat_celular.jpeg', alt: 'Chat desde celular' },
-      { src: '/projects/whatsapp/info_celular.jpeg', alt: 'Info de contacto desde celular' },
-    ],
-  },
+  
   {
     slug: 'momentum',
     title: 'Momentum - Gestor de habitos',
@@ -39,3 +23,22 @@ export const projects: Project[] = [
     ],
   },
 ]
+
+
+/* {
+    slug: 'whatsapp-clone',
+    title: 'Copia de WhatsApp Web',
+    aspect: '9 / 16',
+    description: 'Replica de la interfaz de WhatsApp Web enfocada en UI responsive y comportamiento basico de chat.',
+    stack: ['React', 'CSS'],
+    repoUrl: ['https://github.com/VitoLattanzi/tp-final-front-end.git'],
+    siteUrl: 'https://tp-final-front-end-nine.vercel.app/chats/',
+    images: [
+      { src: '/projects/whatsapp/home.png', alt: 'Home de la copia de WhatsApp' },
+      { src: '/projects/whatsapp/chat.png', alt: 'Vista de chat' },
+      { src: '/projects/whatsapp/info_contacto.png', alt: 'Pantalla de informacion de contacto' },
+      { src: '/projects/whatsapp/home_celular.jpeg', alt: 'Home desde celular' },
+      { src: '/projects/whatsapp/chat_celular.jpeg', alt: 'Chat desde celular' },
+      { src: '/projects/whatsapp/info_celular.jpeg', alt: 'Info de contacto desde celular' },
+    ],
+  }, */

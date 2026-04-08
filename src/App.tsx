@@ -4,7 +4,7 @@ import Proyects from '@/secctions/Proyects'
 import AboutMe from '@/secctions/Aboutme'
 import Footer from '@/secctions/Footer'
 import Skills from '@/secctions/Skills'
-
+import Contact from '@/secctions/contact'
 
 export default function App() {
   return (
@@ -17,6 +17,7 @@ export default function App() {
           <Skills />
         </div>
         <Proyects />
+        <Contact/>
       </main>
       <hr className="page_divider" />
       <Footer />
