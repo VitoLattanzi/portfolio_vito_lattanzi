@@ -34,7 +34,11 @@ export const projects: Project[] = [
     ],
     siteUrl: 'https://logisticamartinez.com.ar/',
     images: [
-      {src:"",alt:""} 
+      {src:"/Projects/logistica/home.png",alt:"Pantalla de inicio con carrusel de imagenes "}, 
+      {src:"/Projects/logistica/contacto.png",alt:"Pantalla de contacto con formulario de mailtrap"},
+      {src:"/Projects/logistica/home_mobile.png",alt:"Pantalla de inicio con carrusel de imagenes desde celular"},
+      {src:"/Projects/logistica/contact_mobile.png",alt:"Pantalla de contacto con formulario de mailtrap desde celular"},
+      {src:"/Projects/logistica/maps_mobile.png",alt:"Pantalla de maps con integracion de api desde celular"},
     ],
   },
 ]
