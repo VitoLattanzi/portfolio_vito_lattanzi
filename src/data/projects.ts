@@ -24,7 +24,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'logistica martines',
-    title: 'landing page para logistica martines',
+    title: 'Landing Page comercial',
     aspect: '16 / 9',
     description:
       'landing page con integracion de formulario de contacto con mailtrap. Frontend en React/Context API, integracion de mapa para localizar la empresa.',
@@ -34,11 +34,7 @@ export const projects: Project[] = [
     ],
     siteUrl: 'https://logisticamartinez.com.ar/',
     images: [
-      { src: '/projects/momentum/inicio.png', alt: 'Pantalla de inicio con resumen de habitos' },
-      { src: '/projects/momentum/add.habits.png', alt: 'Formulario para agregar un nuevo habito' },
-      { src: '/projects/momentum/entradas,diarias.png', alt: 'Seccion de entradas diarias de habitos' },
-      { src: '/projects/momentum/LOGIN.png', alt: 'Pantalla de login de Momentum' },
-      { src: '/projects/momentum/homemobile.png', alt: 'Vista mobile del dashboard de Momentum' },
+      {src:"",alt:""} 
     ],
   },
 ]
