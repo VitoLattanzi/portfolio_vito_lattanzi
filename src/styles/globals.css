@@ -24,6 +24,10 @@ i[class*="devicon-"] {
   font-style: normal;
 }
 
+i[class*="devicon-"]::before {
+  display: inline-block;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
