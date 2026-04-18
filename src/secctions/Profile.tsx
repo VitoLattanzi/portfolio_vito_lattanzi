@@ -15,7 +15,7 @@ export default function Profile() {
           <h1 className="profile_section_vito_name">{vito.name}</h1>
           <p className="profile_section_badge">{vito.role}</p>
           <p className="profile_section_vito_info">
-            {vitoAge ? `${vitoAge} anos - ` : ''}
+            {vitoAge ? `${vitoAge} años - ` : ''}
             {vito.tagline}
           </p>
           <p className="profile_section_vito_shortbio">{vito.shortBio}</p>
