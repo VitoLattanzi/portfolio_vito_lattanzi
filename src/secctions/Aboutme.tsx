@@ -1,16 +1,25 @@
+import { vito, vitoExperience } from '@/data/person'
+
 export default function AboutMe() {
   return (
-    <section id="about" className="AboutMe_section">
-      <div>
-        <h2 className="AboutMe_title">Sobre mi</h2>
-        <p className="AboutMe_text">
-          Estudiante de Ingenieria en Sistemas (UTN). Enfocado en desarrollo con React/TypeScript y
-          Node.js, aplicando buenas practicas y principios de codigo limpio. Interesado en la
-          optimizacion, resolucion de problemas y mejora continua del rendimiento. Experiencia
-          previa en hardware y soporte tecnico, lo que me aporta una vision completa del
-          funcionamiento de los sistemas. Me motivan los desafios tecnicos y la creacion de
-          soluciones eficientes y escalables.
-        </p>
+    <section id="about" className="h-full bg-bg-alt/50 border border-white/10 p-8 rounded-2xl">
+      <h2 className="text-2xl font-bold mb-8 text-text-main text-center lg:text-left">Sobre Mí</h2>
+      
+      <p className="text-text-muted mb-12 leading-relaxed">
+        {vito.longBio}
+      </p>
+
+      <div className="relative pl-6 border-l border-white/10 flex flex-col gap-10">
+        {vitoExperience.map((item, index) => (
+          <div key={index} className="relative">
+            <div className="absolute -left-[33px] top-1 w-4 h-4 rounded-full bg-bg-main border-2 border-accent" />
+            <div className="flex flex-col gap-1">
+              <h3 className="font-bold text-text-main">{item.title}</h3>
+              <p className="text-accent text-sm font-medium">{item.company} • {item.period}</p>
+              <p className="text-text-muted text-sm mt-1">{item.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   )

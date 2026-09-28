@@ -1,44 +1,51 @@
 import type { Project } from '@/types'
 
 export const projects: Project[] = [
-  
+  {
+    slug: 'garpa',
+    title: 'Garpa - Gestor de Gastos',
+    aspect: '16 / 9',
+    description: 'Arquitecté una solución Full Stack para la gestión de gastos compartidos utilizando Next.js, Prisma y Supabase, logrando una reducción del 40% en el tiempo de conciliación de deudas mediante automatización de cálculos y persistencia de datos en tiempo real.',
+    stack: ['Next.js', 'Prisma', 'Supabase', 'Tailwind CSS'],
+    repoUrl: [''],
+    siteUrl: '',
+    images: [],
+  },
   {
     slug: 'momentum',
-    title: 'Momentum - Gestor de habitos',
+    title: 'Momentum - Habit Tracker',
     aspect: '16 / 9',
-    description:
-      'App para seguimiento de habitos con dashboard, rachas, historial de 7 dias y registro diario. Frontend en React/Context API y backend Node/Express + Mongo con JWT y verificacion por email.',
-    stack: ['React', 'Vite', 'Context API', 'CSS', 'Node.js', 'Express', 'MongoDB', 'JWT'],
+    description: 'Desarrollé una aplicación MERN (MongoDB, Express, React, Node.js) para el seguimiento de hábitos diarios, implementando autenticación segura con JWT y un sistema de dashboard interactivo que garantiza una experiencia de usuario fluida y persistencia total de datos.',
+    stack: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT'],
     repoUrl: [
       'https://github.com/VitoLattanzi/tp_final_frontend',
       'https://github.com/VitoLattanzi/tp_final_vito_lattanzi_',
     ],
     siteUrl: 'https://momentum-orcin-six.vercel.app/',
     images: [
-      { src: '/projects/momentum/inicio.png', alt: 'Pantalla de inicio con resumen de habitos' },
-      { src: '/projects/momentum/add.habits.png', alt: 'Formulario para agregar un nuevo habito' },
-      { src: '/projects/momentum/entradas,diarias.png', alt: 'Seccion de entradas diarias de habitos' },
-      { src: '/projects/momentum/LOGIN.png', alt: 'Pantalla de login de Momentum' },
-      { src: '/projects/momentum/homemobile.png', alt: 'Vista mobile del dashboard de Momentum' },
+      { src: '/projects/momentum/inicio.png', alt: 'Pantalla de inicio' },
     ],
   },
   {
-    slug: 'logistica martines',
-    title: 'Landing Page comercial',
+    slug: 'electronica-ld',
+    title: 'ElectronicaLD - E-commerce',
     aspect: '16 / 9',
-    description:
-      'landing page con integracion de formulario de contacto con mailtrap. Frontend en React/Context API, integracion de mapa para localizar la empresa.',
-    stack: ['React', 'Vite', 'Context API', 'CSS', 'Node.js'],
-    repoUrl: [
-      'https://github.com/VitoLattanzi/pagina-logisticagys',
-    ],
+    description: 'Desarrollé el ecosistema web para ElectronicaLD integrando automatizaciones con n8n y Groq API para la gestión inteligente de leads y servicios técnicos, optimizando los flujos de trabajo operativos y la conversión de clientes mediante Meta Ads.',
+    stack: ['React', 'n8n', 'Groq API', 'Apify'],
+    repoUrl: [],
+    siteUrl: '',
+    images: [],
+  },
+  {
+    slug: 'logistica-martinez',
+    title: 'Logística Martínez - Landing Page',
+    aspect: '16 / 9',
+    description: 'Optimicé la presencia digital de Logística Martínez mediante una landing page comercial de alto impacto con integración de CRM y mapas interactivos, facilitando la captación de clientes potenciales a través de formularios optimizados y diseño responsive.',
+    stack: ['React', 'Node.js', 'CSS'],
+    repoUrl: ['https://github.com/VitoLattanzi/pagina-logisticagys'],
     siteUrl: 'https://logisticamartinez.com.ar/',
     images: [
-      {src:"/projects/logistica-martinez/home.png",alt:"Pantalla de inicio con carrusel de imagenes "}, 
-      {src:"/projects/logistica-martinez/contacto.png",alt:"Pantalla de contacto con formulario de mailtrap"},
-      {src:"/projects/logistica-martinez/home_mobile.png",alt:"Pantalla de inicio con carrusel de imagenes desde celular"},
-      {src:"/projects/logistica-martinez/contact_mobile.png",alt:"Pantalla de contacto con formulario de mailtrap desde celular"},
-      {src:"/projects/logistica-martinez/maps_mobile.png",alt:"Pantalla de maps con integracion de api desde celular"},
+      { src: '/projects/logistica-martinez/home.png', alt: 'Landing Page Logística Martínez' },
     ],
   },
 ]

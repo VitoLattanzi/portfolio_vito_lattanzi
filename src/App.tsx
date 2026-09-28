@@ -10,9 +10,9 @@ export default function App() {
   return (
     <div className="pagina_completa">
       <Navbar />
-      <main className="main">
+      <main className="flex flex-col gap-16 py-16">
         <Profile />
-        <div className="main_skills">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto w-full px-6">
           <AboutMe />
           <Skills />
         </div>
@@ -23,4 +23,6 @@ export default function App() {
       <Footer />
     </div>
   )
-} 
+}
+
+

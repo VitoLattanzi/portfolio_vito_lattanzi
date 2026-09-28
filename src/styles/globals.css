@@ -1,44 +1,46 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: 'Geist', 'Inter', system-ui, sans-serif;
+  --color-bg-main: #0b0f1c;
+  --color-bg-alt: #10172b;
+  --color-panel: #121c33;
+  --color-accent: #58a6ff;
+  --color-accent-strong: #7cc4ff;
+  --color-text-main: #e6ecf5;
+  --color-text-muted: #aeb8cf;
+  --color-border: rgba(255, 255, 255, 0.12);
+}
+
 :root {
-  --bg: #0b0f1c;
-  --bg-alt: #10172b;
-  --panel: #121c33;
+  /* Mantengo las variables CSS para compatibilidad, pero uso @theme de Tailwind v4 */
+  --bg: var(--color-bg-main);
+  --bg-alt: var(--color-bg-alt);
+  --panel: var(--color-panel);
   --panel-strong: #0f172a;
-  --accent: #58a6ff;
-  --accent-strong: #7cc4ff;
-  --text: #e6ecf5;
-  --muted: #aeb8cf;
-  --border: rgba(255, 255, 255, 0.12);
+  --accent: var(--color-accent);
+  --accent-strong: var(--color-accent-strong);
+  --text: var(--color-text-main);
+  --muted: var(--color-text-muted);
+  --border: var(--color-border);
   --shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
-}
-
-i[class*="devicon-"] {
-  font-family: 'devicon' !important;
-  font-style: normal;
-}
-
-i[class*="devicon-"]::before {
-  display: inline-block;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background: radial-gradient(1200px at 10% 10%, rgba(88, 166, 255, 0.08), transparent),
-    radial-gradient(900px at 90% 10%, rgba(88, 166, 255, 0.05), transparent),
-    var(--bg);
-  color: var(--text);
-  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
   line-height: 1.6;
   overflow-x: hidden;
 }
+
+/* ... Mantengo el resto de los estilos para evitar romper el layout actual durante esta fase 1 ... */
 
 a {
   color: inherit;

@@ -6,6 +6,8 @@ dist/
 build/
 .vite/
 .cache/
+AGENTS.md
+mejoras.md
 
 # Logs y temporales
 *.log
