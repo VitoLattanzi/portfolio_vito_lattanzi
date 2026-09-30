@@ -1,5 +1,5 @@
 import { vito, vitoExperience } from '@/data/person'
-import { ExperienceItem } from '@/types'
+import type { ExperienceItem } from '@/types'
 
 export default function AboutMe() {
   return (
