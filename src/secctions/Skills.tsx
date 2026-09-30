@@ -11,13 +11,14 @@ export default function Skills() {
               {category}
             </h3>
             <div className="flex flex-wrap gap-2">
-              {(skills as Array<{name: string}>).map((skill) => (
-                <span 
+              {(skills as Array<{name: string; icon?: string}>).map((skill) => (
+                <div 
                   key={skill.name} 
-                  className="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full border border-accent/20"
+                  className="flex items-center gap-2 px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full border border-accent/20"
                 >
-                  {skill.name}
-                </span>
+                  {skill.icon && <i className={`${skill.icon} text-sm`} />}
+                  <span>{skill.name}</span>
+                </div>
               ))}
             </div>
           </div>
