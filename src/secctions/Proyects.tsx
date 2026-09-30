@@ -57,9 +57,9 @@ export default function Proyects() {
               </div>
 
               {/* Carrusel - Lado Derecho */}
-              {project.images?.length > 0 && (
+              {(project.images?.length ?? 0) > 0 && (
                 <div className="w-full lg:w-1/3">
-                   <MiniCarousel images={project.images} aspect={project.aspect ?? '16 / 9'} />
+                   <MiniCarousel images={project.images ?? []} aspect={project.aspect ?? '16 / 9'} />
                 </div>
               )}
             </article>
