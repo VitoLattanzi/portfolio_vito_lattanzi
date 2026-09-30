@@ -71,9 +71,8 @@ export const vito: Person = {
       { name: 'MySQL', icon: 'devicon-mysql-plain colored' },
     ],
     tools: [
-      { name: 'n8n', icon: 'devicon-n8n-original' },
-      { name: 'Apify', icon: 'devicon-apify-original' },
-      { name: 'Groq API', icon: 'devicon-amazonwebservices-original' },
+      { name: 'API Integration', icon: 'devicon-rss-plain' },
+      { name: 'Workflow Automation', icon: 'devicon-cogs-plain' },
       { name: 'Git', icon: 'devicon-git-plain colored' },
     ],
   },
