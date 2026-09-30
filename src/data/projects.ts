@@ -26,6 +26,7 @@ export const projects: Project[] = [
       { src: '/projects/momentum/inicio.png', alt: 'Pantalla de inicio' },
     ],
   },
+  /* 
   {
     slug: 'electronica-ld',
     title: 'ElectronicaLD - E-commerce',
@@ -36,6 +37,7 @@ export const projects: Project[] = [
     siteUrl: '',
     images: [],
   },
+  */
   {
     slug: 'logistica-martinez',
     title: 'Logística Martínez - Landing Page',
