@@ -3,6 +3,13 @@ export type Contact = {
   url: string
 }
 
+export type ExperienceItem = {
+  title: string
+  company: string
+  period: string
+  description: string
+}
+
 export type Person = {
   name: string
   avatar: string
@@ -12,13 +19,16 @@ export type Person = {
   tagline: string
   shortBio: string
   longBio?: string
+  experience?: ExperienceItem[]
   contacts: Contact[]
   skills: {
-    frontend: { name: string; icon: string; level?: number }[],
-    backend: { name: string; icon: string; level?: number }[],
-    database: { name: string; icon: string; level?: number }[],
+    frontend?: { name: string; icon?: string; level?: number }[]
+    backend?: { name: string; icon?: string; level?: number }[]
+    database?: { name: string; icon?: string; level?: number }[]
+    tools?: { name: string; icon?: string; level?: number }[]
   }
 }
+
 export type Project = {
   slug: string
   title: string

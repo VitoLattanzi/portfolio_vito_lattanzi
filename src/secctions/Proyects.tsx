@@ -32,17 +32,17 @@ export default function Proyects() {
               ) : null}
             </div>
 
-            {project.images?.length > 0 ? (
+            {(project.images?.length ?? 0) > 0 ? (
               <div className="mt-4">
-                 <MiniCarousel images={project.images} aspect={project.aspect ?? '16 / 9'} />
+                 <MiniCarousel images={project.images || []} aspect={project.aspect ?? '16 / 9'} />
               </div>
             ) : null}
 
             <div className="flex gap-3 mt-4">
-              {project.repoUrl?.length > 0 && project.repoUrl[0] !== '' && (
+              {project.repoUrl?.length > 0 && (typeof project.repoUrl === 'string' ? project.repoUrl !== '' : project.repoUrl[0] !== '') && (
                 <SafeLink
                   className="px-4 py-2 rounded-lg bg-bg-alt text-text-main text-sm font-medium hover:bg-white/5 border border-white/10 transition-all"
-                  href={project.repoUrl[0]}
+                  href={Array.isArray(project.repoUrl) ? project.repoUrl[0] : project.repoUrl}
                   external
                 >
                   Ver Código

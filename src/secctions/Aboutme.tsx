@@ -1,4 +1,5 @@
 import { vito, vitoExperience } from '@/data/person'
+import { ExperienceItem } from '@/types'
 
 export default function AboutMe() {
   return (
@@ -10,7 +11,7 @@ export default function AboutMe() {
       </p>
 
       <div className="relative pl-6 border-l border-white/10 flex flex-col gap-10">
-        {vitoExperience.map((item, index) => (
+        {vitoExperience.map((item: ExperienceItem, index: number) => (
           <div key={index} className="relative">
             <div className="absolute -left-[33px] top-1 w-4 h-4 rounded-full bg-bg-main border-2 border-accent" />
             <div className="flex flex-col gap-1">
