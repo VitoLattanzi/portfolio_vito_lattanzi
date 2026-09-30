@@ -78,7 +78,36 @@ export const vito: Person = {
   },
 }
 
+export const workExperience = [
+  {
+    title: 'Junior Freelance Software Developer',
+    company: 'Freelance',
+    period: '2025 - Presente',
+    description: 'Desarrollo web full-stack, automatización con n8n, scraping con Apify y optimización de flujos con Groq API.',
+  },
+  {
+    title: 'IT Technician',
+    company: 'Freelance / Local',
+    period: '2024 - Presente',
+    description: 'Soporte técnico integral, mantenimiento de hardware, redes y optimización de sistemas.',
+  },
+]
+
+export const education = [
+  {
+    title: 'Ingeniería en Sistemas de Información',
+    company: 'UTN',
+    period: '2024 - Presente',
+    description: 'Formación universitaria en arquitectura de sistemas, algoritmos y gestión de proyectos.',
+  },
+  {
+    title: 'Diplomatura Full Stack Programming',
+    company: 'UTN',
+    period: '2024 - 2025',
+    description: 'Certificación profesional en desarrollo de aplicaciones web full-stack.',
+  },
+]
+
 export const vitoAge = vito.birthdate ? calcAge(vito.birthdate) : undefined
 export const vitoSkills = vito.skills ? vito.skills : {}
-export const vitoExperience = vito.experience ? vito.experience : []
 
