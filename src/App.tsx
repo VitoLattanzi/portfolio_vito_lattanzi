@@ -12,7 +12,7 @@ export default function App() {
       <Navbar />
       <main className="flex flex-col gap-16 py-16">
         <Profile />
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto w-full px-6">
+        <div className="flex flex-col gap-12 max-w-5xl mx-auto w-full px-6">
           <AboutMe />
           <Skills />
         </div>

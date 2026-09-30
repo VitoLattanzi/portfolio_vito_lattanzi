@@ -7,24 +7,17 @@ export default function Proyects() {
     <section id="projects" className="max-w-4xl mx-auto px-6 py-16">
       <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-center text-text-main">Proyectos</h2>
       
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col gap-16">
         {projects.map(project => (
           <div key={project.slug}>
             <h3 className="text-2xl font-bold text-text-main mb-6 hover:text-accent transition-colors">
               {project.title}
             </h3>
             
-            <article className="bg-bg-alt/50 border border-white/10 p-6 rounded-2xl flex flex-col md:flex-row gap-8 hover:border-accent/30 transition-all shadow-lg hover:shadow-accent/5">
+            <article className="bg-bg-alt/50 border border-white/10 p-8 rounded-2xl flex flex-col lg:flex-row gap-8 hover:border-accent/30 transition-all shadow-lg hover:shadow-accent/5">
               
-              {/* Carrusel - Columna 1 */}
-              {project.images?.length > 0 && (
-                <div className="w-full md:w-1/3">
-                   <MiniCarousel images={project.images} aspect={project.aspect ?? '16 / 9'} />
-                </div>
-              )}
-
-              {/* Información - Columna 2 */}
-              <div className="w-full md:w-2/3 flex flex-col gap-4">
+              {/* Información - Lado Izquierdo */}
+              <div className="w-full lg:w-2/3 flex flex-col gap-4">
                 <p className="text-text-muted text-sm leading-relaxed flex-1">
                   {project.description}
                 </p>
@@ -62,6 +55,13 @@ export default function Proyects() {
                   )}
                 </div>
               </div>
+
+              {/* Carrusel - Lado Derecho */}
+              {project.images?.length > 0 && (
+                <div className="w-full lg:w-1/3">
+                   <MiniCarousel images={project.images} aspect={project.aspect ?? '16 / 9'} />
+                </div>
+              )}
             </article>
           </div>
         ))}
