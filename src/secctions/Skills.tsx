@@ -2,7 +2,7 @@ import { vitoSkills } from '@/data/person'
 
 export default function Skills() {
   return (
-    <section id="skills" className="h-full bg-bg-alt/50 border border-white/10 p-8 rounded-2xl">
+    <section id="skills" className="card p-8">
       <h2 className="section-title">Habilidades</h2>
       <div className="flex flex-col gap-6">
         {Object.entries(vitoSkills).map(([category, skills]) => (
@@ -14,7 +14,7 @@ export default function Skills() {
               {(skills as Array<{name: string; icon?: string}>).map((skill) => (
                 <div 
                   key={skill.name} 
-                  className="flex items-center gap-2 px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full border border-accent/20"
+                  className="badge flex items-center gap-2"
                 >
                   {skill.icon && <i className={`${skill.icon} text-sm`} />}
                   <span>{skill.name}</span>

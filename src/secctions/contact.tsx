@@ -8,18 +8,18 @@ export default function Contact() {
   return (
     <section id="contact" className="section-slim">
       <h2 className="section-title">¿Trabajamos juntos?</h2>
-      <p className="text-lg text-text-muted leading-relaxed max-w-lg mx-auto mb-8">
+      <p className="text-lg text-text-muted leading-relaxed max-w-lg mx-auto mb-10">
         Siempre estoy abierto a nuevas oportunidades y desafíos. Si tienes una propuesta o simplemente quieres saludar, no dudes en contactarme.
       </p>
 
-      <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center mt-6 mb-8">
+      <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center mt-2 mb-8">
         {email && (
           <a
             href={email}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Enviar correo electrónico a Vito Lattanzi"
-            className="px-8 py-4 bg-accent text-bg-main font-bold rounded-xl hover:bg-accent-strong transition-all hover:scale-105 shadow-lg w-full sm:w-auto text-center"
+            className="btn-primary"
           >
             Enviar Email
           </a>
@@ -30,7 +30,7 @@ export default function Contact() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Perfil de LinkedIn de Vito Lattanzi"
-            className="px-8 py-4 bg-bg-alt text-text-main font-medium rounded-xl hover:bg-white/5 border border-white/10 transition-all hover:scale-105 w-full sm:w-auto text-center"
+            className="btn-secondary"
           >
             LinkedIn
           </a>
@@ -41,7 +41,7 @@ export default function Contact() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp de Vito Lattanzi"
-            className="px-8 py-4 bg-bg-alt text-text-main font-medium rounded-xl hover:bg-white/5 border border-white/10 transition-all hover:scale-105 w-full sm:w-auto text-center"
+            className="btn-secondary"
           >
             WhatsApp
           </a>
@@ -50,3 +50,4 @@ export default function Contact() {
     </section>
   )
 }
+

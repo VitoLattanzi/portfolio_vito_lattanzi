@@ -26,12 +26,12 @@ export default function Profile() {
         </p>
 
         <div className="flex flex-wrap gap-3 mt-2 justify-center md:justify-start">
-          <a href="#projects" className="px-6 py-3 rounded-xl bg-accent text-bg-main font-bold hover:bg-accent-strong transition-all shadow-lg hover:shadow-accent/20">
+          <a href="#projects" className="btn-primary">
             Ver Proyectos
           </a>
           <a
             href="#contact"
-            className="px-6 py-3 rounded-xl bg-bg-alt text-text-main font-medium hover:bg-white/5 transition-all border border-white/10 hover:border-white/20"
+            className="btn-secondary"
           >
             Contactarme
           </a>
@@ -41,7 +41,7 @@ export default function Profile() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="px-6 py-3 rounded-xl bg-bg-alt text-text-main font-medium hover:bg-white/5 transition-all border border-white/10 hover:border-white/20"
+              className="btn-secondary"
             >
               GitHub
             </a>
