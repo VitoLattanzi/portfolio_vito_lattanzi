@@ -44,7 +44,7 @@ export const vito: Person = {
   ],
 
   contacts: [
-    { label: 'Email', url: 'mailto:vitofrancolattanzi@gmail.com' },
+    { label: 'Email', url: 'https://mail.google.com/mail/?view=cm&to=vitofrancolattanzi@gmail.com&su=Contacto%20Portfolio&body=Hola%20Vito,' },
     { label: 'WhatsApp', url: 'https://wa.me/541138916445' },
     { label: 'GitHub', url: 'https://github.com/VitoLattanzi' },
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/vito-lattanzi-ab9927338' },

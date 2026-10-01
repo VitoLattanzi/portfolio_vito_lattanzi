@@ -30,7 +30,7 @@ export default function Profile() {
             Ver Proyectos
           </a>
           <a
-            href={vito.contacts.find(c => c.label === 'Email')?.url}
+            href="#contact"
             className="px-6 py-3 rounded-xl bg-bg-alt text-text-main font-medium hover:bg-white/5 transition-all border border-white/10 hover:border-white/20"
           >
             Contactarme
