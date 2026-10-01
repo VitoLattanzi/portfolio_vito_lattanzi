@@ -3,7 +3,7 @@ import { vitoSkills } from '@/data/person'
 export default function Skills() {
   return (
     <section id="skills" className="h-full bg-bg-alt/50 border border-white/10 p-8 rounded-2xl">
-      <h2 className="text-2xl font-bold mb-8 text-text-main text-center lg:text-left">Habilidades</h2>
+      <h2 className="section-title">Habilidades</h2>
       <div className="flex flex-col gap-6">
         {Object.entries(vitoSkills).map(([category, skills]) => (
           <div key={category} className="flex flex-col gap-3">

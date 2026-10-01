@@ -7,8 +7,8 @@ export const projects: Project[] = [
     aspect: '16 / 9',
     description: 'Arquitecté una solución Full Stack para la gestión de gastos compartidos utilizando Next.js, Prisma y Supabase, logrando una reducción del 40% en el tiempo de conciliación de deudas mediante automatización de cálculos y persistencia de datos en tiempo real.',
     stack: ['Next.js', 'Prisma', 'Supabase', 'Tailwind CSS'],
-    repoUrl: [''],
-    siteUrl: '',
+    repoUrl: ['https://github.com/VitoLattanzi/garpa'],
+    siteUrl: 'https://garpa.vercel.app/',
     images: [],
   },
   {

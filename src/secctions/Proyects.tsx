@@ -4,10 +4,12 @@ import { projects } from '@/data/projects'
 
 export default function Proyects() {
   return (
-    <section id="projects" className="max-w-4xl mx-auto px-6 py-16">
-      <h2 className="text-3xl lg:text-4xl font-bold mb-20 text-center text-text-main">Proyectos</h2>
+    <section id="projects" className="section">
+      <h2 className="section-title">Proyectos</h2>
       
       <div className="flex flex-col gap-16">
+
+
         {projects.map(project => (
           <article 
             key={project.slug} 

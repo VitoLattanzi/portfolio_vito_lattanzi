@@ -6,13 +6,13 @@ export default function Contact() {
   const whatsapp = vito.contacts.find(c => c.label === 'WhatsApp')?.url
 
   return (
-    <section id="contact" className="py-24 px-6 max-w-2xl mx-auto flex flex-col items-center text-center gap-8">
-      <h2 className="text-4xl font-bold text-text-main">¿Trabajamos juntos?</h2>
-      <p className="text-lg text-text-muted leading-relaxed max-w-lg">
+    <section id="contact" className="section-slim">
+      <h2 className="section-title">¿Trabajamos juntos?</h2>
+      <p className="text-lg text-text-muted leading-relaxed max-w-lg mx-auto mb-8">
         Siempre estoy abierto a nuevas oportunidades y desafíos. Si tienes una propuesta o simplemente quieres saludar, no dudes en contactarme.
       </p>
 
-      <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+      <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center mt-6 mb-8">
         {email && (
           <a
             href={email}

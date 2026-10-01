@@ -42,6 +42,24 @@ body {
 
 /* ... Mantengo el resto de los estilos para evitar romper el layout actual durante esta fase 1 ... */
 
+/* --- NUEVAS CLASES CENTRALIZADAS (AboutMe) --- */
+.about-container { @apply h-full bg-bg-alt/50 border border-white/10 p-4 rounded-2xl; }
+.about-text { @apply text-text-muted mb-6 leading-relaxed; }
+.about-grid { @apply grid grid-cols-1 lg:grid-cols-2 gap-8; }
+.about-subtitle { @apply text-xl font-semibold mb-4 text-text-main; }
+.about-timeline { @apply relative pl-6 border-l border-white/10 flex flex-col gap-6; }
+.timeline-item { @apply relative; }
+.timeline-node { @apply absolute -left-[33px] top-1 w-4 h-4 rounded-full bg-bg-main border-2 border-accent; }
+.timeline-content { @apply flex flex-col gap-1; }
+.timeline-title { @apply font-bold text-text-main; }
+.timeline-meta { @apply text-accent text-sm font-medium; }
+.timeline-desc { @apply text-text-muted text-sm mt-1; }
+
+/* --- NUEVAS CLASES CENTRALIZADAS (UI/UX) --- */
+.section { @apply max-w-4xl mx-auto px-6 py-8; }
+.section-slim { @apply max-w-4xl mx-auto px-6 py-4; }
+.section-title { @apply text-3xl lg:text-4xl font-bold mb-8 text-center text-text-main uppercase tracking-wide; }
+
 a {
   color: inherit;
   text-decoration: none;
