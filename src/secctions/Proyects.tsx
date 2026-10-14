@@ -1,5 +1,5 @@
-import MiniCarousel from '@/components/Carousel_de_img'
 import SafeLink from '@/components/SafeLinks'
+import ResponsiveImage from '@/components/ResponsiveImage'
 import { projects } from '@/data/projects'
 
 export default function Proyects() {
@@ -57,11 +57,27 @@ export default function Proyects() {
               </div>
 
               {/* Carrusel - Lado Derecho */}
+              {/* 
               {(project.images?.length ?? 0) > 0 && (
                 <div className="w-full lg:w-1/3">
                    <MiniCarousel images={project.images ?? []} aspect={project.aspect ?? '16 / 9'} />
                 </div>
               )}
+              */}
+              
+              {/* Imagen autogenerada */}
+              <SafeLink 
+                href={project.siteUrl} 
+                external 
+                className="w-full lg:w-1/3 block group overflow-hidden"
+              >
+                <ResponsiveImage 
+                  desktopSrc={`/projects/${project.slug}/desktop.png`}
+                  mobileSrc={`/projects/${project.slug}/mobile.png`}
+                  alt={project.title}
+                  className="rounded-lg shadow-lg w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </SafeLink>
             </article>
           </div>
         ))}
