@@ -6,30 +6,27 @@ import Footer from '@/secctions/Footer'
 import Skills from '@/secctions/Skills'
 import Contact from '@/secctions/contact'
 import SEO from '@/components/SEO'
+import { vito } from '@/data/person'
 
 export default function App() {
   return (
     <div className="pagina_completa">
-      <SEO 
-        title="Vito Lattanzi | Full Stack Developer & Automatización" 
-        description="Portfolio de Vito Lattanzi, Desarrollador Full Stack apasionado por la automatización de procesos y el desarrollo web eficiente."
+      <SEO
+        title={vito.seo?.title ?? vito.name}
+        description={vito.seo?.description ?? vito.tagline}
       />
       <Navbar />
-      <main className="flex flex-col gap-16 py-16">
+      <main className="main">
         <Profile />
-        <div className="flex flex-col gap-12 max-w-5xl mx-auto w-full px-6">
+        <div className="main-columns">
           <AboutMe />
           <Skills />
         </div>
         <Proyects />
-        <Contact/>
+        <Contact />
       </main>
       <hr className="page_divider" />
       <Footer />
     </div>
   )
 }
-
-
-
-

@@ -15,11 +15,20 @@ export type Person = {
   avatar: string
   role: string
   location?: string
+  availability?: string
   birthdate?: string // de forma "YYYY-MM-DD"
   tagline: string
   shortBio: string
   longBio?: string
   experience?: ExperienceItem[]
+  seo?: {
+    title: string
+    description: string
+  }
+  contact?: {
+    title: string
+    subtitle: string
+  }
   contacts: Contact[]
   skills: {
     frontend?: { name: string; icon?: string; level?: number }[]

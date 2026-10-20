@@ -26,7 +26,7 @@ export function titleCase(s: string): string {
 export function calcAge(birthISO: string): number {
   const [y, m, d] = birthISO.split('-').map(Number)
   const today = new Date()
-  let age = today.getFullYear() - y
+  const age = today.getFullYear() - y
   const hasHadBirthday =
     today.getMonth() + 1 > m || (today.getMonth() + 1 === m && today.getDate() >= d)
   return hasHadBirthday ? age : age - 1

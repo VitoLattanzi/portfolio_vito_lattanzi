@@ -6,6 +6,7 @@ export const vito: Person = {
   avatar: '/avatar.jpg',
   role: 'Full Stack Developer & Automatización',
   location: 'Buenos Aires, Argentina',
+  availability: 'Disponible para remoto',
   birthdate: '2006-03-02',
 
   tagline: 'Estudiante de Ingeniería en Sistemas. Desarrollo web y automatización con enfoque práctico y orientado a soluciones.',
@@ -15,6 +16,18 @@ export const vito: Person = {
 
   longBio:
     'Soy estudiante de Ingeniería en Sistemas de la Información en UTN y me enfoco en el desarrollo de aplicaciones web y automatización de procesos. Trabajo con tecnologías como React, TypeScript, Node.js, Express y bases de datos como MongoDB y MySQL, construyendo aplicaciones completas con enfoque en simplicidad, rendimiento y usabilidad. Además, cuento con experiencia práctica en soporte técnico, hardware y redes.',
+
+  seo: {
+    title: 'Vito Lattanzi | Full Stack Developer & Automatización',
+    description:
+      'Portfolio de Vito Lattanzi, Desarrollador Full Stack en Buenos Aires. Proyectos con React, TypeScript, Node.js y automatización de procesos.',
+  },
+
+  contact: {
+    title: '¿Trabajamos juntos?',
+    subtitle:
+      'Estoy abierto a nuevas oportunidades y desafíos. Si tenés una propuesta o simplemente querés saludar, podés contactarme por cualquiera de estos medios.',
+  },
 
   experience: [
     {
@@ -48,32 +61,31 @@ export const vito: Person = {
     { label: 'WhatsApp', url: 'https://wa.me/541138916445' },
     { label: 'GitHub', url: 'https://github.com/VitoLattanzi' },
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/vito-lattanzi-ab9927338' },
-    { label: 'CV', url: '/cv_vito_lattanzi.pdf' },
   ],
 
   skills: {
     frontend: [
-      { name: 'React', icon: 'devicon-react-original colored' },
-      { name: 'TypeScript', icon: 'devicon-typescript-plain colored' },
-      { name: 'Tailwind CSS', icon: 'devicon-tailwindcss-original colored' },
-      { name: 'HTML5', icon: 'devicon-html5-plain colored' },
-      { name: 'CSS3', icon: 'devicon-css3-plain colored' },
-      { name: 'JavaScript', icon: 'devicon-javascript-plain colored' },
+      { name: 'React', icon: 'react' },
+      { name: 'TypeScript', icon: 'typescript' },
+      { name: 'Tailwind CSS', icon: 'tailwindcss' },
+      { name: 'HTML5', icon: 'html5' },
+      { name: 'CSS3', icon: 'css' },
+      { name: 'JavaScript', icon: 'javascript' },
     ],
     backend: [
-      { name: 'Node.js', icon: 'devicon-nodejs-plain colored' },
-      { name: 'Express', icon: 'devicon-express-original' },
-      { name: 'Supabase', icon: 'devicon-supabase-plain colored' },
-      { name: 'Prisma', icon: 'devicon-prisma-original colored' },
+      { name: 'Node.js', icon: 'nodedotjs' },
+      { name: 'Express', icon: 'express' },
+      { name: 'Supabase', icon: 'supabase' },
+      { name: 'Prisma', icon: 'prisma' },
     ],
     database: [
-      { name: 'MongoDB', icon: 'devicon-mongodb-plain colored' },
-      { name: 'MySQL', icon: 'devicon-mysql-plain colored' },
+      { name: 'MongoDB', icon: 'mongodb' },
+      { name: 'MySQL', icon: 'mysql' },
     ],
     tools: [
-      { name: 'API Integration', icon: 'devicon-rss-plain' },
-      { name: 'Workflow Automation', icon: 'devicon-cogs-plain' },
-      { name: 'Git', icon: 'devicon-git-plain colored' },
+      { name: 'API Integration', icon: 'rss' },
+      { name: 'Workflow Automation', icon: 'n8n' },
+      { name: 'Git', icon: 'git' },
     ],
   },
 }
