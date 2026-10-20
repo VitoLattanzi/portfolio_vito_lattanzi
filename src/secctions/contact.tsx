@@ -9,17 +9,19 @@ export default function Contact() {
   return (
     <section id="contact" className="section-slim">
       <div className="card text-center">
-        <h2 className="section-title">{vito.contact?.title ?? 'Contacto'}</h2>
-        <p className="text-lg text-text-muted leading-relaxed max-w-xl mx-auto mb-8">
+        <h2 className="section-title contact-title">
+          {vito.contact?.title ?? 'Contacto'}
+        </h2>
+        <p className="text-lg text-text-muted leading-relaxed max-w-xl mx-auto mb-12">
           {vito.contact?.subtitle}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
+        <div className="contact-actions">
           {email && (
             <SafeLink
               href={email}
               external
-              aria-label="Enviar un correo electrónico a Vito Lattanzi"
+              aria-label={`Enviar un correo electrónico a ${vito.name}`}
               className="btn-primary"
             >
               <img className="w-5 h-5 filter invert" src="/icons/gmail.svg" alt="" />

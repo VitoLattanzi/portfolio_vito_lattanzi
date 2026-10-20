@@ -44,9 +44,9 @@ export default function Proyects() {
                 )}
               </div>
 
-              <article className="card flex flex-col lg:flex-row gap-8 items-start">
-                <div className="w-full lg:flex-1 flex flex-col gap-5">
-                  <p className="text-text-muted text-sm leading-relaxed">
+              <article className="card project-card flex flex-col lg:flex-row">
+                <div className="w-full lg:flex-1 min-w-0 flex flex-col gap-5">
+                  <p className="text-slate-300 text-sm leading-relaxed">
                     {project.description}
                   </p>
 
@@ -74,13 +74,13 @@ export default function Proyects() {
                     )}
                     {project.siteUrl && (
                       <SafeLink
-                        className="project-link"
+                        className="project-link project-link--accent"
                         href={project.siteUrl}
                         external
                         aria-label={`Ver el sitio en vivo de ${project.title}`}
                       >
                         <img className="w-5 h-5 filter invert" src="/icons/globe.svg" alt="" />
-                        <span>Sitio en vivo</span>
+                        <span>Demo</span>
                       </SafeLink>
                     )}
                   </div>

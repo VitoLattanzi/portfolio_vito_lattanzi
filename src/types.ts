@@ -14,6 +14,7 @@ export type Person = {
   name: string
   avatar: string
   role: string
+  email?: string
   location?: string
   availability?: string
   birthdate?: string // de forma "YYYY-MM-DD"

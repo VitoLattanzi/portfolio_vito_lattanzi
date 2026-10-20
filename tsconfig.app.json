@@ -23,8 +23,7 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
-    /* 👇 agregados para alias */
-    "baseUrl": ".",
+    /* Alias de imports (relativo a este tsconfig) */
     "paths": {
       "@/*": ["./src/*"]
     }

@@ -84,11 +84,23 @@ body {
 .btn-icon { @apply inline-flex items-center justify-center p-2 rounded-lg text-text-main transition-all; }
 .btn-icon:hover { background: rgba(88, 166, 255, 0.12); transform: translateY(-1px); }
 
-.card { @apply bg-bg-alt/50 border border-white/10 p-8 rounded-2xl shadow-lg transition-all; }
-.card:hover { border-color: rgba(88, 166, 255, 0.28); }
+.card {
+  @apply bg-bg-alt/50 border border-white/10 p-6 lg:p-8 rounded-2xl shadow-lg backdrop-blur-sm transition-all duration-300;
+}
+.card:hover {
+  border-color: rgba(88, 166, 255, 0.3);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
 
-.badge { @apply px-3 py-1 bg-accent/10 text-accent text-xs font-semibold rounded-full border border-accent/20 transition-colors; }
-.badge:hover { border-color: rgba(88, 166, 255, 0.45); }
+.badge {
+  @apply px-3 py-1 bg-accent/10 text-accent text-xs font-semibold rounded-full border border-accent/20;
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+.badge:hover {
+  border-color: rgba(88, 166, 255, 0.5);
+  background: rgba(88, 166, 255, 0.15);
+  transform: translateY(-2px);
+}
 
 .nav-link {
   @apply px-4 py-2 rounded-full text-text-main/90 hover:bg-accent/10 hover:text-accent transition-all font-medium text-sm;
@@ -108,16 +120,19 @@ body {
 
 /* --- NUEVAS CLASES CENTRALIZADAS (AboutMe) --- */
 .about-container { @apply h-full bg-bg-alt/50 border border-white/10 p-8 rounded-2xl; }
-.about-text { @apply text-text-muted mb-6 leading-relaxed; }
-.about-grid { @apply grid grid-cols-1 lg:grid-cols-2 gap-8; }
-.about-subtitle { @apply text-xl font-semibold mb-4 text-text-main; }
-.about-timeline { @apply relative pl-6 border-l border-white/10 flex flex-col gap-6; }
+.about-text { @apply text-slate-300 mb-14 leading-relaxed; }
+.about-grid { @apply grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mt-8; }
+.about-subtitle { @apply text-xl font-semibold tracking-wide mb-8 text-white; }
+.about-timeline { @apply relative pl-6 border-l border-white/10 flex flex-col gap-10; }
 .timeline-item { @apply relative; }
-.timeline-node { @apply absolute -left-[33px] top-1 w-4 h-4 rounded-full bg-bg-main border-2 border-accent; }
-.timeline-content { @apply flex flex-col gap-1; }
+.timeline-node {
+  @apply absolute -left-[31px] top-[6px] w-3.5 h-3.5 rounded-full bg-bg-main border-2 border-accent;
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.12);
+}
+.timeline-content { @apply flex flex-col gap-1.5; }
 .timeline-title { @apply font-bold text-text-main; }
 .timeline-meta { @apply text-accent text-sm font-medium; }
-.timeline-desc { @apply text-text-muted text-sm mt-1; }
+.timeline-desc { @apply text-text-muted text-sm mt-1 leading-relaxed; }
 
 /* --- NUEVAS CLASES CENTRALIZADAS (UI/UX) --- */
 .section-slim { @apply max-w-5xl mx-auto px-6 py-8; }
@@ -1109,24 +1124,43 @@ p {
 }
 
 /* ---------- PROJECT MEDIA ---------- */
+.project-card {
+  @apply gap-8 lg:gap-12 items-center;
+}
+.project-card:hover {
+  transform: translateY(-2px);
+}
+
 .project-media {
-  @apply relative w-full lg:w-1/3 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-bg-main;
+  @apply relative w-full lg:w-1/3 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-bg-main shadow-2xl;
 }
 .project-media img {
   @apply w-full h-full object-cover transition-transform duration-500;
+  object-position: top;
 }
 .project-media:hover img {
   transform: scale(1.04);
 }
 
 .project-actions {
-  @apply flex flex-wrap items-center gap-4 mt-1;
+  @apply flex flex-wrap items-center gap-3 mt-1;
 }
 .project-link {
-  @apply inline-flex items-center gap-2 text-sm font-semibold text-text-muted transition-colors;
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border border-white/10 bg-bg-main/60 text-text-main transition-all;
 }
 .project-link:hover {
+  border-color: rgba(88, 166, 255, 0.45);
+  background: rgba(88, 166, 255, 0.1);
+  transform: translateY(-1px);
+}
+.project-link--accent {
+  background: rgba(88, 166, 255, 0.14);
+  border-color: rgba(88, 166, 255, 0.35);
   color: var(--accent-strong);
+}
+.project-link--accent:hover {
+  background: rgba(88, 166, 255, 0.22);
+  border-color: rgba(88, 166, 255, 0.6);
 }
 
 /* ---------- MOTION ---------- */
@@ -1173,5 +1207,25 @@ p {
   .card,
   .about-container {
     padding: 20px 16px;
+  }
+}
+
+.contact-title {
+  margin-bottom: 20px;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .contact-actions {
+    flex-direction: column;
+    align-items: stretch;
   }
 }

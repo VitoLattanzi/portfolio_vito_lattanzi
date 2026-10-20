@@ -5,6 +5,7 @@ export const vito: Person = {
   name: 'Vito Lattanzi',
   avatar: '/avatar.jpg',
   role: 'Full Stack Developer & Automatización',
+  email: 'vitofrancolattanzi@gmail.com',
   location: 'Buenos Aires, Argentina',
   availability: 'Disponible para remoto',
   birthdate: '2006-03-02',
