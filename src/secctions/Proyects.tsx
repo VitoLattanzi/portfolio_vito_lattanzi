@@ -1,7 +1,7 @@
 import SafeLink from '@/components/SafeLinks'
 import ResponsiveImage from '@/components/ResponsiveImage'
-import { projects } from '@/data/projects'
 import type { Project } from '@/types'
+import { useI18n } from '@/i18n/useI18n'
 
 function getRepoUrl(project: Project): string | undefined {
   const repo = Array.isArray(project.repoUrl) ? project.repoUrl[0] : project.repoUrl
@@ -9,9 +9,11 @@ function getRepoUrl(project: Project): string | undefined {
 }
 
 export default function Proyects() {
+  const { projects, t } = useI18n()
+
   return (
     <section id="projects" className="section">
-      <h2 className="section-title">Proyectos</h2>
+      <h2 className="section-title">{t.sections.projects}</h2>
 
       <div className="flex flex-col gap-14">
         {projects.map((project, index) => {
@@ -33,7 +35,7 @@ export default function Proyects() {
                     href={project.siteUrl}
                     external
                     className="group"
-                    aria-label={`Abrir el sitio de ${project.title}`}
+                    aria-label={`${t.projects.openSite} ${project.title}`}
                   >
                     <h3 className="text-2xl font-bold text-text-main transition-colors group-hover:text-accent">
                       {project.title}
@@ -46,7 +48,7 @@ export default function Proyects() {
 
               <article className="card project-card flex flex-col lg:flex-row">
                 <div className="w-full lg:flex-1 min-w-0 flex flex-col gap-5">
-                  <p className="text-slate-300 text-sm leading-relaxed">
+                  <p className="text-text-soft text-sm leading-relaxed">
                     {project.description}
                   </p>
 
@@ -66,10 +68,10 @@ export default function Proyects() {
                         className="project-link"
                         href={repoUrl}
                         external
-                        aria-label={`Ver el código fuente de ${project.title} en GitHub`}
+                        aria-label={`${t.projects.viewCode} ${project.title}`}
                       >
                         <img className="w-5 h-5 filter invert" src="/icons/github.svg" alt="" />
-                        <span>Código</span>
+                        <span>{t.projects.code}</span>
                       </SafeLink>
                     )}
                     {project.siteUrl && (
@@ -77,10 +79,10 @@ export default function Proyects() {
                         className="project-link project-link--accent"
                         href={project.siteUrl}
                         external
-                        aria-label={`Ver el sitio en vivo de ${project.title}`}
+                        aria-label={`${t.projects.openSite} ${project.title}`}
                       >
                         <img className="w-5 h-5 filter invert" src="/icons/globe.svg" alt="" />
-                        <span>Demo</span>
+                        <span>{t.projects.demo}</span>
                       </SafeLink>
                     )}
                   </div>
@@ -91,12 +93,12 @@ export default function Proyects() {
                     href={project.siteUrl}
                     external
                     className="project-media aspect-[16/9] w-full lg:w-1/3 block group"
-                    aria-label={`Abrir el sitio de ${project.title}`}
+                    aria-label={`${t.projects.openSite} ${project.title}`}
                   >
                     <ResponsiveImage
                       desktopSrc={`/projects/${project.slug}/desktop.png`}
                       mobileSrc={`/projects/${project.slug}/mobile.png`}
-                      alt={`Vista previa del proyecto ${project.title}`}
+                      alt={`${t.projects.preview} ${project.title}`}
                       className="w-full h-full object-cover"
                     />
                   </SafeLink>
@@ -105,7 +107,7 @@ export default function Proyects() {
                     <ResponsiveImage
                       desktopSrc={`/projects/${project.slug}/desktop.png`}
                       mobileSrc={`/projects/${project.slug}/mobile.png`}
-                      alt={`Vista previa del proyecto ${project.title}`}
+                      alt={`${t.projects.preview} ${project.title}`}
                       className="w-full h-full object-cover"
                     />
                   </div>

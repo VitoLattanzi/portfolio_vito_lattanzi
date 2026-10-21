@@ -1,19 +1,18 @@
 import SafeLink from '@/components/SafeLinks'
-import { vito } from '@/data/person'
+import { useI18n } from '@/i18n/useI18n'
 
 export default function Contact() {
-  const email = vito.contacts.find(c => c.label === 'Email')?.url
-  const linkedin = vito.contacts.find(c => c.label === 'LinkedIn')?.url
-  const whatsapp = vito.contacts.find(c => c.label === 'WhatsApp')?.url
+  const { person, t } = useI18n()
+  const email = person.contacts.find(c => c.label === 'Email')?.url
+  const linkedin = person.contacts.find(c => c.label === 'LinkedIn')?.url
+  const whatsapp = person.contacts.find(c => c.label === 'WhatsApp')?.url
 
   return (
     <section id="contact" className="section-slim">
       <div className="card text-center">
-        <h2 className="section-title contact-title">
-          {vito.contact?.title ?? 'Contacto'}
-        </h2>
+        <h2 className="section-title contact-title">{person.contact?.title}</h2>
         <p className="text-lg text-text-muted leading-relaxed max-w-xl mx-auto mb-12">
-          {vito.contact?.subtitle}
+          {person.contact?.subtitle}
         </p>
 
         <div className="contact-actions">
@@ -21,33 +20,33 @@ export default function Contact() {
             <SafeLink
               href={email}
               external
-              aria-label={`Enviar un correo electrónico a ${vito.name}`}
+              aria-label={`${t.contact.emailAria} ${person.name}`}
               className="btn-primary"
             >
               <img className="w-5 h-5 filter invert" src="/icons/gmail.svg" alt="" />
-              Enviar email
+              {t.contact.sendEmail}
             </SafeLink>
           )}
           {linkedin && (
             <SafeLink
               href={linkedin}
               external
-              aria-label="Perfil de LinkedIn de Vito Lattanzi"
+              aria-label={`${t.contact.linkedinAria} ${person.name}`}
               className="btn-secondary"
             >
               <img className="w-5 h-5 filter invert" src="/icons/linkedin.svg" alt="" />
-              LinkedIn
+              {t.contact.linkedin}
             </SafeLink>
           )}
           {whatsapp && (
             <SafeLink
               href={whatsapp}
               external
-              aria-label="Contactar a Vito Lattanzi por WhatsApp"
+              aria-label={`${t.contact.whatsappAria} ${person.name}`}
               className="btn-secondary"
             >
               <img className="w-5 h-5 filter invert" src="/icons/whatsapp.svg" alt="" />
-              WhatsApp
+              {t.contact.whatsapp}
             </SafeLink>
           )}
         </div>

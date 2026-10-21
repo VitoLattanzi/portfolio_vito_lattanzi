@@ -6,14 +6,17 @@ import Footer from '@/secctions/Footer'
 import Skills from '@/secctions/Skills'
 import Contact from '@/secctions/contact'
 import SEO from '@/components/SEO'
-import { vito } from '@/data/person'
+import { useI18n } from '@/i18n/useI18n'
 
 export default function App() {
+  const { person } = useI18n()
+
   return (
     <div className="pagina_completa">
       <SEO
-        title={vito.seo?.title ?? vito.name}
-        description={vito.seo?.description ?? vito.tagline}
+        title={person.seo?.title ?? person.name}
+        description={person.seo?.description ?? person.tagline}
+        author={person.name}
       />
       <Navbar />
       <main className="main">

@@ -1,22 +1,17 @@
 import TechIcon from '@/components/TechIcon'
-import { vitoSkills } from '@/data/person'
+import { useI18n } from '@/i18n/useI18n'
 
 type SkillItem = { name: string; icon?: string; level?: number }
 
-const categoryLabels: Record<string, string> = {
-  frontend: 'Frontend',
-  backend: 'Backend',
-  database: 'Bases de datos',
-  tools: 'Herramientas & Automatización',
-}
-
 export default function Skills() {
-  const entries = Object.entries(vitoSkills ?? {})
+  const { person, t } = useI18n()
+  const entries = Object.entries(person.skills ?? {})
+  const categoryLabels = t.skillsCategories as Record<string, string>
 
   return (
     <section id="skills" className="card p-8" aria-labelledby="skills-title">
       <h2 id="skills-title" className="section-title">
-        Habilidades
+        {t.sections.skills}
       </h2>
 
       <div className="flex flex-col gap-6 text-center">

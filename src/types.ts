@@ -1,3 +1,5 @@
+export type Locale = 'es' | 'en'
+
 export type Contact = {
   label: string
   url: string
@@ -22,6 +24,7 @@ export type Person = {
   shortBio: string
   longBio?: string
   experience?: ExperienceItem[]
+  education?: ExperienceItem[]
   seo?: {
     title: string
     description: string

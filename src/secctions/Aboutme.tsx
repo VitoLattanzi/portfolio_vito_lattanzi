@@ -1,9 +1,9 @@
-import { vito, workExperience, education } from '@/data/person'
 import type { ExperienceItem } from '@/types'
+import { useI18n } from '@/i18n/useI18n'
 
-function Timeline({ items }: { items: ExperienceItem[] }) {
+function Timeline({ items, empty }: { items: ExperienceItem[]; empty: string }) {
   if (!items.length) {
-    return <p className="timeline-desc">Sin información disponible.</p>
+    return <p className="timeline-desc">{empty}</p>
   }
 
   return (
@@ -25,22 +25,24 @@ function Timeline({ items }: { items: ExperienceItem[] }) {
 }
 
 export default function AboutMe() {
+  const { person, t } = useI18n()
+
   return (
     <section id="about" className="about-container" aria-labelledby="about-title">
       <h2 id="about-title" className="section-title">
-        Sobre Mí
+        {t.sections.about}
       </h2>
 
-      <p className="about-text">{vito.longBio}</p>
+      <p className="about-text">{person.longBio}</p>
 
       <div className="about-grid">
         <div>
-          <h3 className="about-subtitle">Experiencia</h3>
-          <Timeline items={workExperience ?? []} />
+          <h3 className="about-subtitle">{t.about.experience}</h3>
+          <Timeline items={person.experience ?? []} empty={t.about.empty} />
         </div>
         <div>
-          <h3 className="about-subtitle">Educación</h3>
-          <Timeline items={education ?? []} />
+          <h3 className="about-subtitle">{t.about.education}</h3>
+          <Timeline items={person.education ?? []} empty={t.about.empty} />
         </div>
       </div>
     </section>
