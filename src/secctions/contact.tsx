@@ -1,53 +1,56 @@
-import { vito } from '@/data/person'
+import SafeLink from '@/components/SafeLinks'
+import { useI18n } from '@/i18n/useI18n'
 
 export default function Contact() {
-  const email = vito.contacts.find(c => c.label === 'Email')?.url
-  const linkedin = vito.contacts.find(c => c.label === 'LinkedIn')?.url
-  const whatsapp = vito.contacts.find(c => c.label === 'WhatsApp')?.url
+  const { person, t } = useI18n()
+  const email = person.contacts.find(c => c.label === 'Email')?.url
+  const linkedin = person.contacts.find(c => c.label === 'LinkedIn')?.url
+  const whatsapp = person.contacts.find(c => c.label === 'WhatsApp')?.url
 
   return (
     <section id="contact" className="section-slim">
-      <h2 className="section-title">¿Trabajamos juntos?</h2>
-      <p className="text-lg text-text-muted leading-relaxed max-w-lg mx-auto mb-10">
-        Siempre estoy abierto a nuevas oportunidades y desafíos. Si tienes una propuesta o simplemente quieres saludar, no dudes en contactarme.
-      </p>
+      <div className="card text-center">
+        <h2 className="section-title contact-title">{person.contact?.title}</h2>
+        <p className="text-lg text-text-muted leading-relaxed max-w-xl mx-auto mb-12">
+          {person.contact?.subtitle}
+        </p>
 
-      <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center mt-2 mb-8">
-        {email && (
-          <a
-            href={email}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Enviar correo electrónico a Vito Lattanzi"
-            className="btn-primary"
-          >
-            Enviar Email
-          </a>
-        )}
-        {linkedin && (
-          <a
-            href={linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Perfil de LinkedIn de Vito Lattanzi"
-            className="btn-secondary"
-          >
-            LinkedIn
-          </a>
-        )}
-        {whatsapp && (
-          <a
-            href={whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp de Vito Lattanzi"
-            className="btn-secondary"
-          >
-            WhatsApp
-          </a>
-        )}
+        <div className="contact-actions">
+          {email && (
+            <SafeLink
+              href={email}
+              external
+              aria-label={`${t.contact.emailAria} ${person.name}`}
+              className="btn-primary"
+            >
+              <img className="w-5 h-5 filter invert" src="/icons/gmail.svg" alt="" />
+              {t.contact.sendEmail}
+            </SafeLink>
+          )}
+          {linkedin && (
+            <SafeLink
+              href={linkedin}
+              external
+              aria-label={`${t.contact.linkedinAria} ${person.name}`}
+              className="btn-secondary"
+            >
+              <img className="w-5 h-5 filter invert" src="/icons/linkedin.svg" alt="" />
+              {t.contact.linkedin}
+            </SafeLink>
+          )}
+          {whatsapp && (
+            <SafeLink
+              href={whatsapp}
+              external
+              aria-label={`${t.contact.whatsappAria} ${person.name}`}
+              className="btn-secondary"
+            >
+              <img className="w-5 h-5 filter invert" src="/icons/whatsapp.svg" alt="" />
+              {t.contact.whatsapp}
+            </SafeLink>
+          )}
+        </div>
       </div>
     </section>
   )
 }
-

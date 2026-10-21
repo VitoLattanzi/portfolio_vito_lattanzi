@@ -1,30 +1,31 @@
-import { useState, useEffect } from 'react';
-
 interface ResponsiveImageProps {
-  desktopSrc: string;
-  mobileSrc: string;
-  alt: string;
-  className?: string;
+  desktopSrc: string
+  mobileSrc: string
+  alt: string
+  className?: string
+  loading?: 'lazy' | 'eager'
+  fetchPriority?: 'high' | 'low' | 'auto'
 }
 
-export default function ResponsiveImage({ desktopSrc, mobileSrc, alt, className }: ResponsiveImageProps) {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    checkMobile(); // Check on mount
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
+export default function ResponsiveImage({
+  desktopSrc,
+  mobileSrc,
+  alt,
+  className,
+  loading = 'lazy',
+  fetchPriority = 'auto',
+}: ResponsiveImageProps) {
   return (
-    <img 
-      src={isMobile ? mobileSrc : desktopSrc} 
-      alt={alt} 
-      className={className}
-    />
-  );
+    <picture>
+      <source media="(max-width: 767px)" srcSet={mobileSrc} />
+      <img
+        src={desktopSrc}
+        alt={alt}
+        className={className}
+        loading={loading}
+        fetchPriority={fetchPriority}
+        decoding="async"
+      />
+    </picture>
+  )
 }

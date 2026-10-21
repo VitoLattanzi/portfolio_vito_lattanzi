@@ -1,3 +1,5 @@
+export type Locale = 'es' | 'en'
+
 export type Contact = {
   label: string
   url: string
@@ -14,12 +16,23 @@ export type Person = {
   name: string
   avatar: string
   role: string
+  email?: string
   location?: string
+  availability?: string
   birthdate?: string // de forma "YYYY-MM-DD"
   tagline: string
   shortBio: string
   longBio?: string
   experience?: ExperienceItem[]
+  education?: ExperienceItem[]
+  seo?: {
+    title: string
+    description: string
+  }
+  contact?: {
+    title: string
+    subtitle: string
+  }
   contacts: Contact[]
   skills: {
     frontend?: { name: string; icon?: string; level?: number }[]

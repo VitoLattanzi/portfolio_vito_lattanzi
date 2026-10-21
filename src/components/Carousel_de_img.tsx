@@ -15,8 +15,6 @@ export default function MiniCarousel({ images, aspect = '16 / 9', className }: P
   const touchStartX = useRef(0)
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
 
-  if (!images || images.length === 0) return null
-
   const clamp = (n: number) => (n + images.length) % images.length
   const goTo = (i: number) => setIndex(clamp(i))
   const next = () => goTo(index + 1)
@@ -40,12 +38,20 @@ export default function MiniCarousel({ images, aspect = '16 / 9', className }: P
     if (lightboxIndex === null) return
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setLightboxIndex(null)
-      if (e.key === 'ArrowRight') lightboxNext()
-      if (e.key === 'ArrowLeft') lightboxPrev()
+      if (e.key === 'ArrowRight') {
+        setLightboxIndex(curr => (curr === null ? 0 : (curr + 1) % images.length))
+      }
+      if (e.key === 'ArrowLeft') {
+        setLightboxIndex(curr =>
+          curr === null ? 0 : (curr - 1 + images.length) % images.length
+        )
+      }
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [lightboxIndex])
+  }, [lightboxIndex, images.length])
+
+  if (!images || images.length === 0) return null
 
   const onTouchStart = (e: TouchEvent) => {
     touchStartX.current = e.touches[0].clientX
